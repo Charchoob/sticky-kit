@@ -23,6 +23,12 @@
         inset 0 -30px 20px -20px rgba(0,0,0,0.2);
     }
 
+    .footer {
+      border: 1px solid blue;
+      width: 200px;
+      height: 200px;
+    }
+
     .item.float {
       display: block;
       border: 1px solid rgb(255,255,0);
@@ -71,6 +77,14 @@
 <div class="buttons">
   <button class="recalc">Recalc</button>
 </div>
+
+
+<h1>stick bottom</h1>
+<div class="container one clearfix borders">
+  <div class="item float full"></div>
+  <div class="footer" style="display: block; margin-left: 210px;"> test </div>
+</div>
+
 
 <h1>Basic Stick</h1>
 <div class="container one">
@@ -176,6 +190,8 @@
        height: Math.floor(win.height() * v) + "px"
       });
     }
+
+    $(".footer").stick_in_parent();
 
     $(".container .item").stick_in_parent();
     $("#events_container").on("sticky_kit:stick", function(e) {
